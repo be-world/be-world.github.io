@@ -3,7 +3,7 @@ title: quiet-wins
 description: Building in public my journey as a software developer.
 tagline: "slow, steady, shared"
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://thien.github.io/blueface/"
+url: "https://quiet-wins.com/"
 github:
   url: "https://orbeworld.github.io"
 author:
