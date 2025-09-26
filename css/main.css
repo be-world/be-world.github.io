@@ -38,7 +38,6 @@ header h1 {
   font-weight: bold;
   font: 1em -apple-system-headline, "Droid Sans Mono", Courier, mono;
   text-transform: lowercase;
-  margin-left: 25px;
   padding-bottom: 2.1em;
 }
 header h1 a {
@@ -261,13 +260,12 @@ code {
 #archive h3,
 #archive li,
 #profile img {
-  width: 50%;
+  width: 75%;
   margin-top: 20px;
   margin-right: 20px;
   margin-bottom: 20px;
 }
 #archive li span,
-#archive li span.details,
 .pager {
   padding-left: 0;
   margin: 0px 0;
