@@ -1,8 +1,15 @@
-<html>
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: 'en' }}">
   {% include head.html %}
   <body>
-    {% include navigation.html %}
-    <section id="main">{{ content }}</section>
+    <a class="skip-link" href="#main">Skip to content</a>
+    {% include header.html %}
+    <main id="main" class="site-main container">
+      {% if page.layout != "post" and page.title %}
+        <h1 class="page-title">{{ page.title | escape }}</h1>
+      {% endif %}
+      {{ content }}
+    </main>
+    {% include footer.html %}
   </body>
-  {% include footer.html %}
 </html>

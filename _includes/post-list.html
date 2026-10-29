@@ -1,0 +1,28 @@
+{% comment %}
+  Year-grouped post index.
+  include.posts: posts to render
+  include.empty_message: copy shown when the collection is empty
+{% endcomment %}
+{% assign listed_posts = include.posts %}
+{% if listed_posts == nil or listed_posts.size == 0 %}
+  <p class="empty-state">{{ include.empty_message | default: "Nothing published yet." }}</p>
+{% else %}
+  {% assign posts_by_year = listed_posts | group_by_exp: "post", "post.date | date: '%Y'" %}
+  <div class="post-list">
+    {% for year in posts_by_year %}
+      <section class="post-year" aria-labelledby="year-{{ year.name }}">
+        <h2 id="year-{{ year.name }}" class="post-year__heading">{{ year.name }}</h2>
+        <ol class="post-year__list">
+          {% for post in year.items %}
+            <li class="post-year__item">
+              <time class="post-year__date" datetime="{{ post.date | date: '%Y-%m-%d' }}">
+                {{ post.date | date: "%d %b" }}
+              </time>
+              <a class="post-year__link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+            </li>
+          {% endfor %}
+        </ol>
+      </section>
+    {% endfor %}
+  </div>
+{% endif %}

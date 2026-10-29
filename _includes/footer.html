@@ -1,6 +1,9 @@
-<footer class="footer">
-  {% include social-icons.html %}
-  <div class="footer-text">
-    {{ site.title }} | {{ site.tagline }} by {{ site.author.name }}
+<footer class="site-footer">
+  <div class="site-footer__inner container">
+    {% include social-links.html %}
+    <p class="site-footer__meta">
+      {{ site.title | escape }} | {{ site.tagline | escape }} by {{
+      site.author.name | escape }}
+    </p>
   </div>
 </footer>

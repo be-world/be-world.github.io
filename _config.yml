@@ -1,47 +1,34 @@
-# Jekyll Defaults
 title: quiet-wins
 description: Building in public my journey as a software developer.
-tagline: "slow, steady, shared"
-baseurl: "/" # the subpath of your site, e.g. /blog
-url: "https://quiet-wins.com"
-#url: ""
-github:
-  url: "https://orbeworld.github.io"
+tagline: slow, steady, shared
+lang: en
+url: https://quiet-wins.com
+# Empty because the site is served from the domain root.
+baseurl: ""
+
 author:
-  name: "Camilo Villegas"
-  email: "camilovillegas265@gmail.com"
-  bluesky: "orbeworld.bsky.social"
-  github: "be-world"
-  linkedin: "camilovj"
+  name: Camilo Villegas
+  email: camilovillegas265@gmail.com
+  github: be-world
+  linkedin: camilovj
+
 plugins:
   - jekyll-feed
+
+sass:
+  style: compressed
+  sourcemap: never
+  sass_dir: _sass
 
 defaults:
   - scope:
       path: ""
-      type: "posts"
+      type: posts
     values:
-      layout: "post"
+      layout: post
 
-navigation:
-  - text: Projects
-    url: /projects/
-# Exclude from processing.
-# The following items will not be processed, by default.
-# Any item listed under the `exclude:` key here will be automatically added to
-# the internal "default list".
-#
-# Excluded items can be processed by explicitly listing the directories or
-# their entries' file path in the `include:` list.
-#
-# exclude:
-#   - .sass-cache/
-#   - .jekyll-cache/
-#   - gemfiles/
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules/
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+exclude:
+  - vendor
+  - .bundle
+  - Gemfile
+  - Gemfile.lock
