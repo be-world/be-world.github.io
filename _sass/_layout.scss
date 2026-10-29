@@ -3,12 +3,12 @@ body {
   flex-direction: column;
   min-height: 100vh;
   min-height: 100dvh;
-  padding-left: env(safe-area-inset-left);
-  padding-right: env(safe-area-inset-right);
+  padding-left: #{"env(safe-area-inset-left)"};
+  padding-right: #{"env(safe-area-inset-right)"};
 }
 
 .container {
-  width: min(var(--measure), calc(100% - 2rem));
+  width: #{"min(var(--measure), calc(100% - 2rem))"};
   margin-inline: auto;
 }
 
@@ -52,7 +52,7 @@ body {
 .site-footer {
   margin-top: auto;
   border-top: 1px solid var(--color-border);
-  padding-bottom: env(safe-area-inset-bottom);
+  padding-bottom: #{"env(safe-area-inset-bottom)"};
 }
 
 .site-footer__inner {
